@@ -30,7 +30,7 @@ ggplot(data=NIQ,aes(y=PK_2025,x=Harmonized_Learning_Outcomes,group=Region,color=
   geom_point() +
   geom_smooth(formula = y~x, method="lm",se = F) +
   scale_color_nejm(labels=c("Rest of World","African Countries")) +
-  labs(x = "Harmonized Learning Outcomes",y = "NIQ - Becker dataset, unweighted") +
+  labs(x = "Harmonized Learning Outcomes",y = "NIQ - Parra and Kirkegaard") +
   theme_cowplot() -> ParraKirkegaard
 
 Fig1 <- plot_grid(LV12,BeckerLynnWeighted,ParraKirkegaard)
