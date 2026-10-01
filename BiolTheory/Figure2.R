@@ -51,4 +51,7 @@ ggplot(df,aes(y=IQ_resid,x=PGS_resid)) +
   labs(x = "Educational Attainment Polygenic Score\n(residualized on continent)",y = "NIQ - Lynn & Vanhanen 2012 \n (residualized on continent)") +
   theme_cowplot(12) -> resid_Plot
 
-plot_grid(ConfoundPlot,resid_Plot)
+
+Fig2 <- plot_grid(ConfoundPlot,resid_Plot)
+
+ggsave("Bird_NIQ_Fig2.pdf", Fig2, width = 12, height = 10)
